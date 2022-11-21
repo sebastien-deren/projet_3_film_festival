@@ -1,0 +1,6 @@
+p{
+    color:blue; 
+}
+  p:not(:focus):invalid{
+    color: aliceblue;
+  }
