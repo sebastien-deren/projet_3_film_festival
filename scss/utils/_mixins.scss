@@ -1,0 +1,31 @@
+@mixin min-media-margin($margin:50,$size:"lg",$breaks:$breakpoints){
+    @if map-has-key($breaks,$size){
+        $reduce_none : true;
+        @each $_key, $_value in $breaks {       
+            @media screen and (min-width : ($_value)) {
+                @if($_key==$size){
+                    $reduce_none: false;
+                }
+                @if $reduce_none{
+                    width: 100%;
+                }
+                @else{
+                    width :$_value - $_value/$margin/100;
+                }
+            }
+        }        
+    }
+}
+
+@mixin media-grid($size:"lg",$breaks:$breakpoints){
+    @if map-has-key($breaks, $size){
+        @each $_key, $_value in $breaks {
+            @if($_key==$size){
+                @media screen  and (min-width: ($_value)){
+                    @content    
+                }
+                
+            }
+        }
+    }
+}

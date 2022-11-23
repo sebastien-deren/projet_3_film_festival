@@ -1,0 +1,24 @@
+.hero{
+    &.-mainPage{
+        height: 100vh - $menuHeight;
+        width: 100vw;
+        background-image: none;
+        background-color: greenyellow;
+        padding-left: 2;
+        
+    }
+    &.-otherPages{
+        height: 30vh;
+    }
+    &__element{
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    &__button{
+        padding: 1rem;
+    }
+}

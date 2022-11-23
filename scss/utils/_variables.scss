@@ -1,5 +1,15 @@
 //variables de couleur notamment.
-$primary :#20c997 ;
-$secondary:#0dcaf0;
-$enable-shadow: true;
-$enable-rounded: false;
+
+$breakpoints:(
+    "sm": 480px,
+    "md": 780px,
+    "lg": 1024px,
+    "xl": 1200px
+);
+$primaryColor: black;
+$secondaryColor: White;
+$buttonBgColor: blue;
+$buttonTextColor:red;
+//etc...
+
+$menuHeight: 5vh;

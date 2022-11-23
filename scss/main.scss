@@ -1,3 +1,14 @@
 @import "./utils/variables";
-@import "./utils/utilities";
-@import "./vendors/bootstrap";
+@import "./utils/mixins";
+
+@import "./base/reset";
+
+//@import "./vendors/bootstrap";
+
+@import "./layout/hero";
+@import "./layout/mainMenu";
+@import "./layout/programation";
+@import "./layout/filler";
+@import "./layout/footer";
+
+@import "./composant/button";
