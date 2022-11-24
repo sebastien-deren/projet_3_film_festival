@@ -27,6 +27,10 @@ body {
   background-color: #F8EDE3;
 }
 
+.bgsecond {
+  background-color: #A2B29F;
+}
+
 body {
   color: #333333;
   text-shadow: none;
@@ -35,8 +39,7 @@ body {
 .hero.-mainPage {
   height: 100vh;
   width: 100vw;
-  background-image: none;
-  background-image: url("../../img/hero_img_mainPage.jpg");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), black), url("../../img/hero_img_index.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -202,11 +205,15 @@ body {
 .filler {
   height: 30vh;
   margin-top: 5rem;
-  background-color: #BDD2B6;
+  background: url("https://lespiedssurterre.blog/wp-content/uploads/2018/08/parc-monceau-running.jpg"), linear-gradient(to bottom, rgba(189, 210, 182, 0.5), rgba(162, 178, 159, 0.5));
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
 }
 
 .footer {
-  background-color: cyan;
+  margin-top: 1rem;
   display: grid;
   justify-content: center;
   align-content: space-between;
@@ -242,52 +249,52 @@ body {
   justify-content: center;
 }
 @media screen and (min-width: 480px) {
-  .container .-lg {
+  .container.-lg > * {
     width: 100%;
   }
 }
 @media screen and (min-width: 780px) {
-  .container .-lg {
+  .container.-lg > * {
     width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container .-lg {
+  .container.-lg > * {
     width: 972.8px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .-lg {
+  .container.-lg > * {
     width: 1140px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .container .-lg {
+  .container.-lg > * {
     width: 1330px;
   }
 }
 @media screen and (min-width: 480px) {
-  .container .-md {
+  .container.-md > * {
     width: 100%;
   }
 }
 @media screen and (min-width: 780px) {
-  .container .-md {
+  .container.-md > * {
     width: 741px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .container .-md {
+  .container.-md > * {
     width: 972.8px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container .-md {
+  .container.-md > * {
     width: 1140px;
   }
 }
 @media screen and (min-width: 1400px) {
-  .container .-md {
+  .container.-md > * {
     width: 1330px;
   }
 }
@@ -298,31 +305,6 @@ body {
   justify-content: center;
   align-content: center;
   grid-template-columns: 1fr;
-}
-@media screen and (min-width: 480px) {
-  .newsExtract {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 780px) {
-  .newsExtract {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .newsExtract {
-    width: 972.8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .newsExtract {
-    width: 1140px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .newsExtract {
-    width: 1330px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .newsExtract {
@@ -359,6 +341,25 @@ body {
   text-align: start;
 }
 
+.separator {
+  border-top: 1px #333333 solid;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.indexNews {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+.indexNews__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
 .programation {
   min-height: 50vh;
   display: flex;
@@ -366,31 +367,6 @@ body {
   justify-content: space-around;
   align-content: center;
   flex-wrap: wrap;
-}
-@media screen and (min-width: 480px) {
-  .programation {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 780px) {
-  .programation {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .programation {
-    width: 1013.76px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .programation {
-    width: 1188px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .programation {
-    width: 1386px;
-  }
 }
 .programation__content {
   flex: 1;
@@ -416,11 +392,6 @@ body {
   .programation {
     flex-direction: row;
   }
-}
-
-.mainNews__title {
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

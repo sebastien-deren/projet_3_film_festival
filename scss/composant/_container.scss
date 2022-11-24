@@ -1,12 +1,12 @@
 .container{
-    .-lg{
+    &.-lg >*{
         @include min-media-margin("lg");
 
     }
-    .-md{
+    &.-md >*{
         @include min-media-margin("md");
 
     }
-    display: flex;
-    justify-content: center;
+display: flex;
+justify-content: center;
 }
