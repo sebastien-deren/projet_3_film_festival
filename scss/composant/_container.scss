@@ -1,0 +1,12 @@
+.container{
+    .-lg{
+        @include min-media-margin("lg");
+
+    }
+    .-md{
+        @include min-media-margin("md");
+
+    }
+    display: flex;
+    justify-content: center;
+}

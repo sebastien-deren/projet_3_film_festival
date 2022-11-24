@@ -1,16 +1,22 @@
 .hero{
     &.-mainPage{
-        height: 100vh - $menuHeight;
+        height: 100vh;
         width: 100vw;
         background-image: none;
-        background-color: greenyellow;
-        padding-left: 2;
+        background-image: url("../../img/hero_img_mainPage.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color:$textColorWhite;
         
     }
     &.-otherPages{
-        height: 30vh;
+        height: 40vh;
+        width: 100vw;
+        background-color: $acentuationColor;
     }
     &__element{
+        color:$textColorWhite;
         height:100%;
         display: flex;
         flex-direction: column;
@@ -19,6 +25,6 @@
         text-align: center;
     }
     &__button{
-        padding: 1rem;
+        margin: 1rem;
     }
 }

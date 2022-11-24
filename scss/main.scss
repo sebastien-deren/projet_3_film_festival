@@ -2,13 +2,20 @@
 @import "./utils/mixins";
 
 @import "./base/reset";
+@import "./base/root";
+@import "./base/typography";
 
 //@import "./vendors/bootstrap";
 
 @import "./layout/hero";
-@import "./layout/mainMenu";
-@import "./layout/programation";
+@import "./layout/mainNav";
+
 @import "./layout/filler";
 @import "./layout/footer";
 
 @import "./composant/button";
+@import "./composant/container";
+@import "./composant/newsExtract";
+
+@import "./pages/programation";
+@import "./pages/index"

@@ -1,5 +1,14 @@
 .button{
-    color:$buttonTextColor;
-    background-color: $buttonBgColor;
+    color:$textColorDark;
+    background-color: $primaryColor;
     margin:1rem;
+    padding: 1rem;
+    box-shadow: none;
+    border: solid $textColorDark 1px;
+    border-radius: 10px;
+}
+.button:hover{
+    color: $textColorDark;
+    background-color: $acentuationColor;
+    border: solid $textColorDark 1px;
 }

@@ -4,12 +4,15 @@ $breakpoints:(
     "sm": 480px,
     "md": 780px,
     "lg": 1024px,
-    "xl": 1200px
+    "xl": 1200px,
+    "xxl": 1400px
 );
-$primaryColor: black;
-$secondaryColor: White;
-$buttonBgColor: blue;
-$buttonTextColor:red;
+$primaryColor: #BDD2B6;
+$secondaryColor: #A2B29F;
+$acentuationColor: #798777;
+$backgroundColor:#F8EDE3;
+$textColorDark: #333333;
+$textColorWhite:#fff;
 //etc...
 
 $menuHeight: 5vh;
