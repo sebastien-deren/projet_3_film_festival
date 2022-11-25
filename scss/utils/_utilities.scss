@@ -1,16 +1,15 @@
-$utilities: ()!default;
+$utilities: () !default;
 
-
-$utilities:map-merge(
-$utilities,(
-    "text-opacity":(
-        property: text-opacity,
-        class: to,
-        responsive: true,
-        value:(
-            0:0,
-        ),
-
-    )
- )
+$utilities: map-merge(
+  $utilities,
+  (
+    "text-opacity": (
+      property: text-opacity,
+      class: to,
+      responsive: true,
+      value: (
+        0: 0,
+      ),
+    ),
+  )
 );

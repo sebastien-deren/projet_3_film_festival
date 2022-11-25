@@ -1,29 +1,33 @@
-.hero{
-    &.-mainPage{
-        height: 100vh;
-        width: 100vw;
-        background:linear-gradient(to bottom,rgba($gradientColor1,0.5),rgba($gradientColor2,1)), url("../../img/hero_img_index.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        color:$textColorWhite;
-        
-    }
-    &.-otherPages{
-        height: 40vh;
-        width: 100vw;
-        background-color: $acentuationColor;
-    }
-    &__element{
-        color:$textColorWhite;
-        height:100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    &__button{
-        margin: 1rem;
-    }
+.hero {
+  &.-mainPage {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        rgba($gradientColor2, 0),
+        rgba($gradientColor2, 0.9)
+      ),
+      url("../../img/hero_img_index.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: $textColorWhite;
+  }
+  &.-otherPages {
+    height: 40vh;
+    width: 100vw;
+    background-color: $acentuationColor;
+  }
+  &__content {
+    color: $textColorWhite;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &__button {
+    margin: 1rem;
+  }
 }

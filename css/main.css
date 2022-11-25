@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-html, head, body, header, footer {
+html,
+head,
+body,
+header,
+footer {
   font-size: 100%;
   font-weight: normal;
   margin: 0;
@@ -18,17 +22,17 @@ html, head, body, header, footer {
   list-style: none;
 }
 
-.-mg {
+.margin {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
 body {
-  background-color: #F8EDE3;
+  background-color: #c1e0f7;
 }
 
 .bgsecond {
-  background-color: #A2B29F;
+  background-color: #da4167;
 }
 
 body {
@@ -39,7 +43,7 @@ body {
 .hero.-mainPage {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), black), url("../../img/hero_img_index.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url("../../img/hero_img_index.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -48,9 +52,9 @@ body {
 .hero.-otherPages {
   height: 40vh;
   width: 100vw;
-  background-color: #798777;
+  background-color: #383b53;
 }
-.hero__element {
+.hero__content {
   color: #fff;
   height: 100%;
   display: flex;
@@ -67,16 +71,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 5vh;
 }
 .mainNav__container {
-  min-height: 5vh;
   position: fixed;
   top: 0;
   display: flex;
   align-items: center;
   width: 100%;
   color: #333333;
-  background-color: rgba(189, 210, 182, 0.9);
+  background-color: rgba(0, 168, 120, 0.9);
 }
 @media screen and (min-width: 480px) {
   .mainNav__container {
@@ -104,7 +108,7 @@ body {
   }
 }
 .mainNav__menu {
-  background-color: rgba(189, 210, 182, 0.9);
+  background-color: rgba(218, 65, 103, 0.9);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -128,7 +132,7 @@ body {
 .mainNav__menu li:last-child {
   border-bottom: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 780px) {
   .mainNav__menu {
     background: none;
     height: 5vh;
@@ -144,26 +148,22 @@ body {
     padding-bottom: 1rem;
     border: none;
   }
-}
-@media screen and (min-width: 1024px) {
-  .mainNav__menu-button-container .-close {
-    display: none;
-    visibility: hidden;
-  }
-  .mainNav__menu-button-container .-open {
+  .mainNav__menu-button-container .material-icons {
     display: none;
     visibility: hidden;
   }
 }
 .mainNav__outNavBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  background-color: rgba(56, 59, 83, 0.7);
   height: 100%;
-  width: 25%;
+  min-width: 40%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgba(248, 237, 227, 0.7);
+}
+@media screen and (min-width: 780px) {
+  .mainNav__outNavBar {
+    min-width: 25%;
+  }
 }
 .mainNav__outNavBar__logo {
   text-align: center;
@@ -172,7 +172,7 @@ body {
 #menu-toggle {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 780px) {
   #menu-toggle + .mainNav__menu-button-container {
     z-index: 1;
     display: block;
@@ -205,7 +205,7 @@ body {
 .filler {
   height: 30vh;
   margin-top: 5rem;
-  background: url("https://lespiedssurterre.blog/wp-content/uploads/2018/08/parc-monceau-running.jpg"), linear-gradient(to bottom, rgba(189, 210, 182, 0.5), rgba(162, 178, 159, 0.5));
+  background: url("https://lespiedssurterre.blog/wp-content/uploads/2018/08/parc-monceau-running.jpg"), linear-gradient(to bottom, rgba(0, 168, 120, 0.5), rgba(218, 65, 103, 0.5));
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -230,7 +230,7 @@ body {
 
 .button {
   color: #333333;
-  background-color: #BDD2B6;
+  background-color: #00a878;
   margin: 1rem;
   padding: 1rem;
   box-shadow: none;
@@ -240,7 +240,7 @@ body {
 
 .button:hover {
   color: #333333;
-  background-color: #798777;
+  background-color: #383b53;
   border: solid #333333 1px;
 }
 
@@ -306,27 +306,6 @@ body {
   align-content: center;
   grid-template-columns: 1fr;
 }
-@media screen and (min-width: 1024px) {
-  .newsExtract {
-    grid-template-columns: 1fr 2fr;
-  }
-  .newsExtract__title {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .newsExtract__figure {
-    grid-column: 1;
-    grid-row: 2/3;
-  }
-  .newsExtract__text {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .newsExtract__CTA {
-    grid-column: 2;
-    grid-row: 3;
-  }
-}
 .newsExtract__title {
   display: block;
   margin: auto;
@@ -339,6 +318,58 @@ body {
 }
 .newsExtract__text {
   text-align: start;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.newsExtract.-card {
+  justify-self: center;
+  margin: 1rem;
+  padding: 1rem;
+  width: 80%;
+}
+.newsExtract.-card .newsExtract__text {
+  justify-self: center;
+  width: 70%;
+  height: 100px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .newsExtract.-line {
+    width: 100%;
+    grid-template: "title . ." "figure text text" "figure CTA CTA"/1fr 1fr 1fr;
+    height: auto;
+  }
+  .newsExtract.-line .newsExtract__text {
+    margin: 0;
+  }
+  .newsExtract.-card {
+    width: 100%;
+    margin: 1rem;
+    grid-template: "title" "figure" "text" "CTA";
+  }
+  .newsExtract.-card img {
+    width: 100%;
+    height: auto;
+  }
+  .newsExtract.-card .newsExtract__text {
+    height: 100px;
+    overflow: hidden;
+  }
+  .newsExtract.-card .newsExtract__CTA {
+    text-align: center;
+  }
+  .newsExtract__title {
+    grid-area: title;
+  }
+  .newsExtract__figure {
+    grid-area: figure;
+  }
+  .newsExtract__text {
+    grid-area: text;
+  }
+  .newsExtract__CTA {
+    grid-area: CTA;
+  }
 }
 
 .separator {
@@ -391,6 +422,16 @@ body {
 @media screen and (min-width: 1024px) {
   .programation {
     flex-direction: row;
+  }
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 1024px) {
+  .newsGrid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

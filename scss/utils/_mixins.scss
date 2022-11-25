@@ -1,36 +1,32 @@
-@mixin min-media-margin($size:"lg",$margin:5,$breaks:$breakpoints){
-    @if map-has-key($breaks,$size) {
-
-        $reduce_none : true;
-        @each $_key, $_value in $breaks {       
-            @media screen and (min-width : ($_value)) {
-                @if($_key==$size){
-                    $reduce_none: false;
-                }
-                @if $reduce_none{
-                    width: 100%;
-                }
-                @else{
-                    width :$_value - $_value*$margin*0.01;
-                }
-            }
-        }        
-    }
-};
-
-@mixin min-media($size:"lg",$breaks:$breakpoints){
-    @if map-has-key($breaks, $size){
-        @media screen  and (min-width: map-get($breaks, $size)){
-            @content    
+@mixin min-media-margin($size: "lg", $margin: 5, $breaks: $breakpoints) {
+  @if map-has-key($breaks, $size) {
+    $reduce_none: true;
+    @each $_key, $_value in $breaks {
+      @media screen and (min-width: ($_value)) {
+        @if ($_key==$size) {
+          $reduce_none: false;
         }
-        
-    }
-};
-@mixin max-media($size:"lg",$breaks:$breakpoints) {
-    @if map-has-key($breaks, $size){
-        @media screen  and (max-width: map-get($breaks, $size)){
-            @content    
+        @if $reduce_none {
+          width: 100%;
+        } @else {
+          width: $_value - $_value * $margin * 0.01;
         }
-        
+      }
     }
+  }
+}
+
+@mixin min-media($size: "lg", $breaks: $breakpoints) {
+  @if map-has-key($breaks, $size) {
+    @media screen and (min-width: map-get($breaks, $size)) {
+      @content;
+    }
+  }
+}
+@mixin max-media($size: "lg", $breaks: $breakpoints) {
+  @if map-has-key($breaks, $size) {
+    @media screen and (max-width: map-get($breaks, $size)) {
+      @content;
+    }
+  }
 }
