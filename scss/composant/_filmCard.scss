@@ -1,0 +1,62 @@
+.film {
+  display: grid;
+  &__title {
+    grid-area: title;
+    text-align: center;
+  }
+  &__figure {
+    grid-area: figure;
+    img {
+      margin: auto;
+      height: auto;
+      width: 100%;
+        }
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: content;
+    max-height: 100%;
+  }
+  &__CTA {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+
+    &__reservation {
+      text-align: center;
+      flex: 1;
+    }
+    &__full {
+      flex: 1;
+    }
+     button{
+        width: 75%;
+
+     }
+    @include min-media("sm") {
+      flex-direction: row;
+      button {
+        width: 90%;
+      }
+    }
+  }
+
+  &.-excerpt {
+    grid-template:
+      "title"
+      "figure"
+      "content";
+
+    @include min-media() {
+      grid-template:
+        "title . "
+        "figure content"
+        "figure content"
+        /1fr 1fr;
+    }
+  }
+}

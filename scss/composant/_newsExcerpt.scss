@@ -1,6 +1,5 @@
-.newsExtract {
+.newsexcerpt {
   text-align: center;
-
   display: grid;
   justify-content: center;
   align-content: center;
@@ -8,29 +7,34 @@
   &__title {
     display: block;
     margin: auto;
+    grid-area: title;
   }
   &__figure {
     display: block;
     margin: auto;
     max-width: 100%;
     height: auto;
+    grid-area: figure;
   }
   &__text {
     text-align: start;
     margin-left: 2rem;
     margin-right: 2rem;
-
+    grid-area: text;
   }
-  &.-card{
+  &__CTA {
+    grid-area: CTA;
+  }
+  &.-card {
     justify-self: center;
-    margin:1rem;
+    margin: 1rem;
     padding: 1rem;
-    width:80%;
-    .newsExtract__text{
-        justify-self: center;
-        width: 70%;
-        height:100px;
-        overflow: hidden;
+    width: 80%;
+    .newsexcerpt__text {
+      justify-self: center;
+      width: 70%;
+      height: 100px;
+      overflow: hidden;
     }
   }
   @include min-media {
@@ -42,7 +46,7 @@
         "figure CTA CTA"
         /1fr 1fr 1fr;
       height: auto;
-      .newsExtract__text{
+      .newsexcerpt__text {
         margin: 0;
       }
     }
@@ -59,25 +63,13 @@
         width: 100%;
         height: auto;
       }
-      .newsExtract__text {
+      .newsexcerpt__text {
         height: 100px;
         overflow: hidden;
       }
-      .newsExtract__CTA {
+      .newsexcerpt__CTA {
         text-align: center;
       }
-    }
-    &__title {
-      grid-area: title;
-    }
-    &__figure {
-      grid-area: figure;
-    }
-    &__text {
-      grid-area: text;
-    }
-    &__CTA {
-      grid-area: CTA;
     }
   }
 }

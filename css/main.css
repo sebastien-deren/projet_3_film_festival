@@ -32,7 +32,8 @@ body {
 }
 
 .bgsecond {
-  background-color: #da4167;
+  background-color: #383b53;
+  color: #fff;
 }
 
 body {
@@ -79,36 +80,17 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  width: 100%;
   color: #333333;
   background-color: rgba(0, 168, 120, 0.9);
 }
-@media screen and (min-width: 480px) {
-  .mainNav__container {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 780px) {
-  .mainNav__container {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 1024px) {
   .mainNav__container {
-    width: 972.8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .mainNav__container {
-    width: 1140px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .mainNav__container {
-    width: 1330px;
+    width: 80%;
   }
 }
 .mainNav__menu {
-  background-color: rgba(218, 65, 103, 0.9);
+  background-color: rgba(243, 156, 107, 0.9);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -213,12 +195,21 @@ body {
 }
 
 .footer {
-  margin-top: 1rem;
   display: grid;
   justify-content: center;
-  align-content: space-between;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.footer__contact__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 @media screen and (min-width: 1024px) {
   .footer {
@@ -240,7 +231,7 @@ body {
 
 .button:hover {
   color: #333333;
-  background-color: #383b53;
+  background-color: #f39c6b;
   border: solid #333333 1px;
 }
 
@@ -248,127 +239,87 @@ body {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 480px) {
-  .container.-lg > * {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 780px) {
-  .container.-lg > * {
-    width: 100%;
-  }
+.container.-lg > * {
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .container.-lg > * {
-    width: 972.8px;
+    width: 80%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .container.-lg > * {
-    width: 1140px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .container.-lg > * {
-    width: 1330px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .container.-md > * {
-    width: 100%;
-  }
+.container.-md > * {
+  width: 100%;
 }
 @media screen and (min-width: 780px) {
   .container.-md > * {
-    width: 741px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .container.-md > * {
-    width: 972.8px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container.-md > * {
-    width: 1140px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .container.-md > * {
-    width: 1330px;
+    width: 80%;
   }
 }
 
-.newsExtract {
+.newsexcerpt {
   text-align: center;
   display: grid;
   justify-content: center;
   align-content: center;
   grid-template-columns: 1fr;
 }
-.newsExtract__title {
+.newsexcerpt__title {
   display: block;
   margin: auto;
+  grid-area: title;
 }
-.newsExtract__figure {
+.newsexcerpt__figure {
   display: block;
   margin: auto;
   max-width: 100%;
   height: auto;
+  grid-area: figure;
 }
-.newsExtract__text {
+.newsexcerpt__text {
   text-align: start;
   margin-left: 2rem;
   margin-right: 2rem;
+  grid-area: text;
 }
-.newsExtract.-card {
+.newsexcerpt__CTA {
+  grid-area: CTA;
+}
+.newsexcerpt.-card {
   justify-self: center;
   margin: 1rem;
   padding: 1rem;
   width: 80%;
 }
-.newsExtract.-card .newsExtract__text {
+.newsexcerpt.-card .newsexcerpt__text {
   justify-self: center;
   width: 70%;
   height: 100px;
   overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
-  .newsExtract.-line {
+  .newsexcerpt.-line {
     width: 100%;
     grid-template: "title . ." "figure text text" "figure CTA CTA"/1fr 1fr 1fr;
     height: auto;
   }
-  .newsExtract.-line .newsExtract__text {
+  .newsexcerpt.-line .newsexcerpt__text {
     margin: 0;
   }
-  .newsExtract.-card {
+  .newsexcerpt.-card {
     width: 100%;
     margin: 1rem;
     grid-template: "title" "figure" "text" "CTA";
   }
-  .newsExtract.-card img {
+  .newsexcerpt.-card img {
     width: 100%;
     height: auto;
   }
-  .newsExtract.-card .newsExtract__text {
+  .newsexcerpt.-card .newsexcerpt__text {
     height: 100px;
     overflow: hidden;
   }
-  .newsExtract.-card .newsExtract__CTA {
+  .newsexcerpt.-card .newsexcerpt__CTA {
     text-align: center;
-  }
-  .newsExtract__title {
-    grid-area: title;
-  }
-  .newsExtract__figure {
-    grid-area: figure;
-  }
-  .newsExtract__text {
-    grid-area: text;
-  }
-  .newsExtract__CTA {
-    grid-area: CTA;
   }
 }
 
@@ -380,6 +331,62 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.film {
+  display: grid;
+}
+.film__title {
+  grid-area: title;
+  text-align: center;
+}
+.film__figure {
+  grid-area: figure;
+}
+.film__figure img {
+  margin: auto;
+  height: auto;
+  width: 100%;
+}
+.film__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-area: content;
+  max-height: 100%;
+}
+.film__CTA {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+}
+.film__CTA__reservation {
+  text-align: center;
+  flex: 1;
+}
+.film__CTA__full {
+  flex: 1;
+}
+.film__CTA button {
+  width: 75%;
+}
+@media screen and (min-width: 480px) {
+  .film__CTA {
+    flex-direction: row;
+  }
+  .film__CTA button {
+    width: 90%;
+  }
+}
+.film.-excerpt {
+  grid-template: "title" "figure" "content";
+}
+@media screen and (min-width: 1024px) {
+  .film.-excerpt {
+    grid-template: "title . " "figure content" "figure content"/1fr 1fr;
+  }
 }
 
 .indexNews {
@@ -433,6 +440,26 @@ body {
   .newsGrid {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.films {
+  display: flex;
+  flex-direction: column;
+}
+.films__jour {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.films__jour h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-decoration: underline solid;
+}
+.films__film {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

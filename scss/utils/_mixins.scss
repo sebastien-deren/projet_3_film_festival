@@ -1,17 +1,10 @@
-@mixin min-media-margin($size: "lg", $margin: 5, $breaks: $breakpoints) {
+@use "sass:map";
+
+@mixin min-media-margin($size: "lg", $breaks: $breakpoints) {
   @if map-has-key($breaks, $size) {
-    $reduce_none: true;
-    @each $_key, $_value in $breaks {
-      @media screen and (min-width: ($_value)) {
-        @if ($_key==$size) {
-          $reduce_none: false;
-        }
-        @if $reduce_none {
-          width: 100%;
-        } @else {
-          width: $_value - $_value * $margin * 0.01;
-        }
-      }
+    width: 100%;
+    @media screen and (min-width: (map.get($breaks,$size))) {
+      width: 80%;
     }
   }
 }
