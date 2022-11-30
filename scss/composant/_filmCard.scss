@@ -33,14 +33,18 @@
     &__full {
       flex: 1;
     }
-     button{
+     a{
         width: 75%;
+        padding: none;
+        margin-left: 0;
+        margin-right: 0;
 
      }
     @include min-media("sm") {
       flex-direction: row;
-      button {
-        width: 90%;
+      align-items: center;
+      a {
+        width: 80%;
       }
     }
   }

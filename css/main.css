@@ -29,6 +29,10 @@ footer {
 
 body {
   background-color: #c1e0f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bgsecond {
@@ -170,6 +174,11 @@ body {
     display: none;
     visibility: hidden;
   }
+  #menu-toggle ~ .mainNav__menu {
+    visibility: collapse;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
   #menu-toggle:checked + .mainNav__menu-button-container .-open {
     display: none;
     visibility: hidden;
@@ -181,6 +190,8 @@ body {
   }
   #menu-toggle:checked ~ .mainNav__menu {
     visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
   }
 }
 
@@ -221,9 +232,11 @@ body {
   margin-bottom: 1rem;
 }
 .footer__contact__icons {
+  align-self: flex-end;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 50%;
 }
 .footer__CTA {
   text-align: center;
@@ -251,7 +264,11 @@ body {
   padding: 1rem;
   box-shadow: none;
   border: solid #333333 1px;
-  border-radius: 10px;
+  border-radius: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
 .button:hover {
@@ -293,7 +310,7 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: 1fr;
+  grid-template: "title" "figure" "text" "CTA";
 }
 .newsexcerpt__title {
   display: block;
@@ -401,15 +418,19 @@ body {
 .film__CTA__full {
   flex: 1;
 }
-.film__CTA button {
+.film__CTA a {
   width: 75%;
+  padding: none;
+  margin-left: 0;
+  margin-right: 0;
 }
 @media screen and (min-width: 480px) {
   .film__CTA {
     flex-direction: row;
+    align-items: center;
   }
-  .film__CTA button {
-    width: 90%;
+  .film__CTA a {
+    width: 80%;
   }
 }
 .film.-excerpt {

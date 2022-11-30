@@ -4,6 +4,10 @@
 }
 body {
   background-color: $backgroundColor;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .bgsecond {
   background-color: $acentuationColor;

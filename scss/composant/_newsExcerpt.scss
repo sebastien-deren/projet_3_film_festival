@@ -3,7 +3,11 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: 1fr;
+  grid-template:
+  "title"
+  "figure"
+  "text"
+  "CTA";
   &__title {
     display: block;
     margin: auto;
