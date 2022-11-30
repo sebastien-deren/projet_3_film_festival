@@ -1,0 +1,28 @@
+.flex{
+    background-color: none;
+    background: none;
+    display: flex;
+    width: 80vw;
+    height:20vh;
+}
+.palette{
+    background: none;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    &.primary{
+        background-color: $primaryColor;
+    }
+    &.secondary{
+        background-color: $secondaryColor;
+    }
+    &.acentuation{
+        background-color: $acentuationColor;
+    }
+    &.complementary{
+        background-color: $complementaryColor;
+    }
+    &.background{
+        background-color: $backgroundColor;
+    }
+}

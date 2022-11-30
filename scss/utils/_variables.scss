@@ -1,4 +1,5 @@
 //variables de couleur notamment.
+$menuHeight :5vh;
 
 $breakpoints: (
   "sm": 480px,
@@ -19,14 +20,13 @@ $gradientColor1: White;
 $gradientColor2: Black;
 //etc...
 $green-munsell: #00a878ff;
-$flax: #e2d686ff;
+$iceberg: #79addcff;
 $columbia-blue: #c1e0f7ff;
 $independence: #383b53ff;
 $atomic-tangerine: #f39c6bff;
 
-$menuHeight: 5vh;
 $primaryColor: $green-munsell;
-$secondaryColor: #da4167;
+$secondaryColor: $iceberg;
 $acentuationColor: $independence;
 $complementaryColor: $atomic-tangerine;
 $backgroundColor: $columbia-blue;

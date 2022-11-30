@@ -1,0 +1,94 @@
+.filmSingleton {
+  //margin-top:1rem;
+  //flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__figure {
+    background-image: url(../../img/jurrasic_park.webp);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: ratioCinema(100vw);
+    width: 100vw;
+    position: relative;
+    z-index: -1;
+ 
+    &.-light {
+      color: $textColorWhite;
+      .filmSingleton {
+        &__title,
+        &__category,
+        &__seance {
+          background-color: $acentuationColor;
+        }
+      }
+    }
+    &.-dark {
+      color: $textColorDark;
+      .filmSingleton {
+        &__title,
+        &__category,
+        &__seance {
+          background-color: $secondaryColor;
+        }
+      }
+    }
+  }
+  &__title {
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 50%;
+    top: -1rem;
+    transform: translateX(-50%);
+
+    text-align: center;
+    background-color: $acentuationColor;
+
+    h1 {
+      margin: 0.5rem;
+    }
+  }
+  &__category {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba($acentuationColor, 0.7);
+    border-radius: 0.2rem;
+    p {
+      margin: 0.3rem;
+    }
+  }
+  &__seance {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgba($acentuationColor, 0.7);
+    border-radius: 0.2rem;
+    p {
+      margin: 0.3rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include min-media("md") {
+    &__figure {
+      height: ratioCinema(80vw);
+      width: 80vw;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 2rem;
+    }
+  }
+  @include min-media("lg") {
+    &__figure {
+      height: ratioCinema(60vw);
+      width: 60vw;
+    }
+  }
+}

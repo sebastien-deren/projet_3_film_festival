@@ -1,0 +1,10 @@
+.mediaContent{
+    justify-content: center;
+
+  &__text{
+    color: $textColorDark;
+  }
+  &__CTA {
+    text-align: center;
+  }
+}

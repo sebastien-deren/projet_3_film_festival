@@ -1,0 +1,5 @@
+@use "sass:math";
+
+@function ratioCinema($width : 50vw){
+    @return calc($width / 1.7777777);
+}

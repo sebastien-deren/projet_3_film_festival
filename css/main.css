@@ -184,10 +184,20 @@ body {
   }
 }
 
+.mediaContent {
+  justify-content: center;
+}
+.mediaContent__text {
+  color: #333333;
+}
+.mediaContent__CTA {
+  text-align: center;
+}
+
 .filler {
   height: 30vh;
   margin-top: 5rem;
-  background: url("https://lespiedssurterre.blog/wp-content/uploads/2018/08/parc-monceau-running.jpg"), linear-gradient(to bottom, rgba(0, 168, 120, 0.5), rgba(218, 65, 103, 0.5));
+  background: url("https://lespiedssurterre.blog/wp-content/uploads/2018/08/parc-monceau-running.jpg"), linear-gradient(to bottom, rgba(0, 168, 120, 0.5), rgba(121, 173, 220, 0.5));
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -195,15 +205,19 @@ body {
 }
 
 .footer {
+  margin-top: 1rem;
   display: grid;
   justify-content: center;
+  align-items: center;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto;
 }
 .footer__contact {
+  height: 100%;
+  position: relative;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
-  justify-content: space-between;
   margin-bottom: 1rem;
 }
 .footer__contact__icons {
@@ -211,10 +225,21 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+.footer__CTA {
+  text-align: center;
+}
+.footer.-minified {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  border-top: solid #383b53 1px;
+}
+.footer.-minified .footer__contact {
+  text-align: center;
+}
 @media screen and (min-width: 1024px) {
   .footer {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     justify-content: space-around;
   }
 }
@@ -238,6 +263,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .container.-lg > * {
   width: 100%;
@@ -254,6 +280,12 @@ body {
   .container.-md > * {
     width: 80%;
   }
+}
+.container.-col {
+  flex-direction: column;
+}
+.container.-row {
+  flex-direction: row;
 }
 
 .newsexcerpt {
@@ -460,6 +492,116 @@ body {
 }
 .films__film {
   margin-bottom: 1rem;
+}
+
+.flex {
+  background-color: none;
+  background: none;
+  display: flex;
+  width: 80vw;
+  height: 20vh;
+}
+
+.palette {
+  background: none;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+.palette.primary {
+  background-color: #00a878;
+}
+.palette.secondary {
+  background-color: #79addc;
+}
+.palette.acentuation {
+  background-color: #383b53;
+}
+.palette.complementary {
+  background-color: #f39c6b;
+}
+.palette.background {
+  background-color: #c1e0f7;
+}
+
+.filmSingleton {
+  align-items: center;
+  margin-top: 2rem;
+}
+.filmSingleton__figure {
+  background-image: url(../../img/jurrasic_park.webp);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 56.2500024609vw;
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+}
+.filmSingleton__figure.-light {
+  color: #fff;
+}
+.filmSingleton__figure.-light .filmSingleton__title, .filmSingleton__figure.-light .filmSingleton__category, .filmSingleton__figure.-light .filmSingleton__seance {
+  background-color: #383b53;
+}
+.filmSingleton__figure.-dark {
+  color: #333333;
+}
+.filmSingleton__figure.-dark .filmSingleton__title, .filmSingleton__figure.-dark .filmSingleton__category, .filmSingleton__figure.-dark .filmSingleton__seance {
+  background-color: #79addc;
+}
+.filmSingleton__title {
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 50%;
+  top: -1rem;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #383b53;
+}
+.filmSingleton__title h1 {
+  margin: 0.5rem;
+}
+.filmSingleton__category {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: rgba(56, 59, 83, 0.7);
+  border-radius: 0.2rem;
+}
+.filmSingleton__category p {
+  margin: 0.3rem;
+}
+.filmSingleton__seance {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(56, 59, 83, 0.7);
+  border-radius: 0.2rem;
+}
+.filmSingleton__seance p {
+  margin: 0.3rem;
+}
+.filmSingleton__img {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 780px) {
+  .filmSingleton__figure {
+    height: 45.0000019688vw;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .filmSingleton__figure {
+    height: 33.7500014766vw;
+    width: 60vw;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

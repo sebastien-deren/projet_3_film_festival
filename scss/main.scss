@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/function";
 @import "./utils/mixins";
 
 @import "./base/reset";
@@ -9,7 +10,7 @@
 
 @import "./layout/hero";
 @import "./layout/mainNav";
-
+@import "./layout/mediaContent";
 @import "./layout/filler";
 @import "./layout/footer";
 
@@ -22,3 +23,5 @@
 @import "./pages/index";
 @import "./pages/news";
 @import "./pages/films";
+@import "./pages/palette";
+@import "./pages/singleFilm"
