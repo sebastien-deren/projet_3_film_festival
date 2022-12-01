@@ -175,9 +175,11 @@ body {
     visibility: hidden;
   }
   #menu-toggle ~ .mainNav__menu {
-    visibility: collapse;
+    visibility: visible;
+    position: absolute;
+    top: -10rem;
     opacity: 0;
-    transition: visibility 0s 2s, opacity 2s linear;
+    transition: visibility 5s, opacity 1s, top 0.5s linear;
   }
   #menu-toggle:checked + .mainNav__menu-button-container .-open {
     display: none;
@@ -191,7 +193,8 @@ body {
   #menu-toggle:checked ~ .mainNav__menu {
     visibility: visible;
     opacity: 1;
-    transition: opacity 2s linear;
+    transition: opacity 0.5s, top 1s ease;
+    top: 0;
   }
 }
 

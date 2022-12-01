@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     @include min-media-margin;
-    //height:100%;
     width: 100%;
     color: $textColorDark;
     background-color: rgba($primaryColor, 0.9);
@@ -96,10 +95,12 @@
         visibility: hidden;
       }
     }
-    ~ .mainNav__menu{
-        visibility: collapse;
-        opacity: 0;
-        transition: visibility 0s 2s, opacity 2s linear;
+    ~ .mainNav__menu {
+      visibility: visible;
+      position: absolute;
+      top: -10rem;
+      opacity: 0;
+      transition: visibility 5s, opacity 1s, top 0.5s linear;
     }
 
     &:checked {
@@ -119,7 +120,8 @@
       ~ .mainNav__menu {
         visibility: visible;
         opacity: 1;
-        transition: opacity 2s linear;
+        transition: opacity 0.5s, top 1s ease;
+        top: 0;
       }
     }
   }
