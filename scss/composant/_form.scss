@@ -31,6 +31,7 @@
   @include min-media("md") {
     width: 60%;
     border: $acentuationColor 1px solid;
+    border-radius: 1rem;
     align-content: center;
     &__field{
         margin: 1rem;

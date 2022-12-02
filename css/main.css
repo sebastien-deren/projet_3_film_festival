@@ -320,6 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   .form {
     width: 60%;
     border: #383b53 1px solid;
+    border-radius: 1rem;
     align-content: center;
   }
   .form__field {
@@ -530,6 +531,12 @@ h1, h2, h3, h4, h5, h6 {
   .film.-excerpt {
     grid-template: "title . " "figure content" "figure content"/1fr 1fr;
   }
+}
+
+input {
+  border: solid #79addc 1px;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 5px #79addc;
 }
 
 .indexNews {
