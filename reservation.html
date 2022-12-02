@@ -17,7 +17,8 @@
     </head>
 
     <body>
-        <header class="hero -otherPages ">
+
+        <header>
             <nav class="mainNav ">
                 <div class="mainNav__container">
                     <div class="mainNav__outNavBar">
@@ -43,34 +44,54 @@
 
                 </div>
             </nav>
-            <div class="hero__content">
-                <div class="hero__title">
-                    <h1>Ceci est la maquette d'une actualités</h1>
-                </div>
-                <div class="hero__subTitle">
-                    <h2>comme on peut le voir c'est vraiment pas fini</h2>
-                </div>
-            </div>
         </header>
-        <main>
-            <div class="container -lg -col">
-                <h3>auteur</h3>
-                <h4>date de la news</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus earum dignissimos dolores blanditiis praesentium quisquam aperiam, ad nobis nisi ipsum cupiditate molestias eaque quis laborum adipisci recusandae sapiente facere! Culpa?</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, aliquam minus. Nulla adipisci itaque velit, distinctio praesentium ab consectetur amet illum, ipsam ipsum consequuntur quisquam. Libero beatae aliquid ab eaque.</p>
+        <main class="container -lg -col">
+            <div class="reservation__title">
+            <h2>Réservation</h2>
+            <h3>Jurrassic park</h3>
+            <h4>Séance du 5 aout à 20h30</h4>
+        </div>
+            <section class="form__container">
+                <div class="form">
+                <!-- <div class="form__"> --->
+                    <div class="form__field">
+                        <label>nom :</label>
+                        <input type="text" name="nom" id="nom">
+                    </div>
+                    <div class="form__field">
+
+                        <label>prénom :</label>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                <!-- </div> -->
+                <div class="form__field">
+                    <label>mail :</label>
+                    <input type="email" name="mail" id="mail" >
+                </div>
+                <div class="form__field">
+                    <label>n° de téléphone:</label>
+                    <input type="tel" name="numéro" id="numéro" size="10">
+                </div>
+                <div class="form__field">
+
+                    <label for="quantity">nombre de place:</label>
+                    <input type="number" id="quantity" name="quantity:" min="1" max="12" size="3">
+                </div>
+
+                <div class="form__submit">
+                    <input type="submit" class="button" value="reservez vos places" >
+                </div>
             </div>
+            </section>
+
+
 
         </main>
     </body>
     <footer class="container -lg">
         <div class="footer -minified">
             <div class="test">les films de plein air</div>
-            <div class="footer__CTA"><button class="button">revenir aux news</button></div>
+            <div class="footer__CTA"><a href="./programmation.html" class="button">revenir aux films</a></div>
             <div class="footer__contact test">
                 <h2>nous contacter</h2>
                 <div class="footer__contact__icons">
