@@ -7,13 +7,12 @@
   margin-top: 3rem;
 }
 .programation {
-  min-height: 50vh;
+    margin-top: 3rem ;
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-content: center;
-  flex-wrap: wrap;
   &__content {
+    min-height:50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -54,15 +53,21 @@
   }
   &__illustration {
     flex: 1;
+    justify-self: center;
+    align-self: center;
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       display: block;
-      margin: auto;
+      margin-left:auto;
+      margin-right: auto;
     }
   }
 
-  @include min-media {
+  @include min-media("lg") {
     flex-direction: row;
+  }
+  @include max-media("lg"){
+    flex-direction: column;
   }
 }
