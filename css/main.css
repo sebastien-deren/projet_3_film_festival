@@ -220,7 +220,6 @@ h1, h2, h3, h4, h5, h6 {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: fixed;
 }
 
 .footer {
@@ -519,7 +518,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .film__CTA a {
   width: 75%;
-  padding: none;
   margin-left: 0;
   margin-right: 0;
 }
@@ -652,7 +650,6 @@ input {
 }
 
 .flex {
-  background-color: none;
   background: none;
   display: flex;
   width: 80vw;
