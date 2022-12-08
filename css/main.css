@@ -297,6 +297,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: auto;
   height: 50vh;
 }
+.form__title {
+  text-align: center;
+}
 .form__field {
   display: flex;
   flex-direction: row;
@@ -335,6 +338,10 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     flex-wrap: wrap;
   }
+  .form__title {
+    width: 100%;
+    text-align: center;
+  }
   .form__field {
     width: 40%;
   }
@@ -344,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: 1200px) {
   .form {
-    width: 60%;
+    width: 70vw;
     height: 40vh;
   }
 }
